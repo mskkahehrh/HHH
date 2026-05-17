@@ -25,7 +25,7 @@ const {
   downloadContentFromMessage,
   proto,
   DisconnectReason
-} = require('dct-dula-baileys');
+} = require('@dnuzi/baileys');
 // ---------------- CONFIG ----------------
 const BOT_NAME_FANCY = '𝐀𝚂𝙷𝙸𝚈𝙰-𝐌𝙳 4.0.0𝗩 🥷🇱🇰';
 
@@ -1697,7 +1697,7 @@ case 'emojis': {
   }
   break;
 }
-const { downloadMediaMessage } = require('dct-dula-baileys');
+const { downloadMediaMessage } = require('@dnuzi/baileys');
 
 // ... inside your switch/case block
 
@@ -1793,7 +1793,7 @@ case 'upload': {
         const fs = require('fs');
         const os = require('os');
         const path = require('path');
-        const { downloadMediaMessage } = require('dct-dula-baileys'); 
+        const { downloadMediaMessage } = require('@dnuzi/baileys'); 
         
         // Send reaction first
         await socket.sendMessage(sender, {
@@ -1925,7 +1925,7 @@ case 'upload': {
         const botLogo = 'https://files.catbox.moe/lab4hw.jpeg'; // REPLACE WITH YOUR LOGO URL
 
         // Construct Interactive Message with Buttons
-        const { proto, generateWAMessageFromContent } = require('dct-dula-baileys');
+        const { proto, generateWAMessageFromContent } = require('@dnuzi/baileys');
         
         const msgParams = {
             viewOnceMessage: {
@@ -2156,7 +2156,7 @@ case 'ashiyapair':
 case 'botpair': {
     try {
         const axios = require('axios');
-        const { generateWAMessageFromContent, proto } = require('dct-dula-baileys');
+        const { generateWAMessageFromContent, proto } = require('@dnuzi/baileys');
 
         // 1. පණිවිඩය සහ අංකය ලබා ගැනීම
         let text = (msg.message?.conversation || 
@@ -3611,7 +3611,7 @@ case 'play':
 case 'audio':
 case 'ytmp3': {
     try {
-        const { generateWAMessageFromContent, proto, prepareWAMessageMedia } = require('dct-dula-baileys');
+        const { generateWAMessageFromContent, proto, prepareWAMessageMedia } = require('@dnuzi/baileys');
         const axios = require('axios');
         const yts = require('yt-search');
 
@@ -4574,7 +4574,7 @@ case 'ashiya': {
 
     // 5. Generate & Relay the Message
     // We use relayMessage for advanced interactive buttons (Button V2)
-    const { generateWAMessageFromContent, proto, prepareWAMessageMedia } = require("dct-dula-baileys"); // Adjust import based on your library
+    const { generateWAMessageFromContent, proto, prepareWAMessageMedia } = require("@dnuzi/baileys"); // Adjust import based on your library
 
     // Prepare image header
     const mediaMessage = await prepareWAMessageMedia({ 
